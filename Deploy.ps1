@@ -38,7 +38,7 @@ $j = "planes"
 $PythonParameters = "pipelines.jobs.$j", 1980, 10
 $MainScript = "dbfs:" + $TargetDBFSFolderCode + "/main.py"
 Add-DatabricksPythonJob -BearerToken $BearerToken -Region $Region -JobName $j -ClusterId $ClusterId `
-    -PythonPath $MainScript -PythonParameters $PythonParameters -Libraries $Lib
+    -PythonPath $MainScript -PythonParameters $PythonParameters -Libraries $Lib -Verbose
 
 $j = "amazon"
 $PythonParameters = "pipelines.jobs.$j"
