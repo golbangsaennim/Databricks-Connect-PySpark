@@ -3,6 +3,9 @@ param(
 )
 Set-Location $PSScriptRoot
 
+# Remove a package on the previous build
+Remove-Item -Path ./bin -Force -Recurse
+
 New-Item ./bin -ItemType Directory -Force | Out-Null
 
 $egg = Get-ChildItem -Path './dist/pipelines-*.whl' | Where-Object { -not $_.PsIsContainer } | Sort-Object LastWriteTime -Descending | Select-Object -first 1
