@@ -1,6 +1,6 @@
 param(
     [string]$Environment="INT",
-    [string]$Region = "westeurope",
+    [string]$Region = "Korea Central",
     [string]$ClusterId = "0920-081811-lamps471",
     [string]$TargetDBFSFolderCode = "/DatabricksConnectDemo/Code",
     [string]$BearerToken = ""
